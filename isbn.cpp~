@@ -70,7 +70,7 @@ int main()
     // create two new test cases each for ISBN10 and ISBN13 that fail
     string strG = "1425785321";     // ISBN10
     string strH = "X43837X883290";  // ISBN13
-    string strI = "0316015849";     // ISBN10
+    string strI = "3160158409";     // ISBN10
     string strJ = "97X032X925534";  // ISBN13
     
     
