@@ -48,6 +48,12 @@ int main()
     string strE = "9780133591743";//ISBN13 for css book
     string strF = "8601401247128";//ISBN13 for english book
     
+    string strG = "0124567743";//doesn't work
+    string strH = "0392366441";//doesn't work
+    
+    string strI = "9780468642743";//doesn't work
+    string strG = "8602490653728";//doesn't work
+    
     int sum1 = sumISBN10Digits(strA);
     int sum2 = sumISBN13Digits(strB);
     
