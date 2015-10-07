@@ -39,7 +39,7 @@ int main()
     string strA = "0385353308";      // test case for ISBN10
     string strB = "9780136091813";   // test case for ISBN13
     
-//****START CHANGES
+//****FIRST SET OF CHANGES: test cases that pass
     
     // create two new test cases each for ISBN10 and ISBN13 that pass
     string strC = "0538497904";     // ISBN10
@@ -47,13 +47,15 @@ int main()
     string strE = "032192553X";     // ISBN10
     string strF = "9780321925534";  // ISBN13
     
-    // calculate checksums for strA, strB, strC, strD, strE, and strF
+    
+    // calculate checksums
     int sumA = sumISBN10Digits(strA);   
     int sumB = sumISBN13Digits(strB);   
     int sumC = sumISBN10Digits(strC);   
     int sumD = sumISBN13Digits(strD);   
     int sumE = sumISBN10Digits(strE);   
     int sumF = sumISBN13Digits(strF);  
+    
     
     // check validity of all strings
     assert( isValidISBN10(sumA) == true );
@@ -62,8 +64,27 @@ int main()
     assert( isValidISBN13(sumD) == true );
     assert( isValidISBN10(sumE) == true );
     assert( isValidISBN13(sumF) == true );
+        
+//****SECOND SET OF CHANGES: test cases that fail
+
+    // create two new test cases each for ISBN10 and ISBN13 that fail
+    string strG = "1425785321";     // ISBN10
+    string strH = "X43837X883290";  // ISBN13
+    string strI = "3160158409";     // ISBN10
+    string strJ = "97X032X925534";  // ISBN13
     
-//****END CHANGES
+    
+    // calculate checksums
+    int sumG = sumISBN10Digits(strG);   
+    int sumH = sumISBN13Digits(strH);   
+    int sumI = sumISBN10Digits(strI);   
+    int sumJ = sumISBN13Digits(strJ);
+    
+    // check validity of all strings
+    assert( isValidISBN10(sumG) == false );
+    assert( isValidISBN13(sumH) == false );
+    assert( isValidISBN10(sumI) == false );
+    assert( isValidISBN13(sumJ) == false );
       
     return 0;
     
