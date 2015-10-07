@@ -1,26 +1,30 @@
-// Joe Welch
-// ISBN Check for 10 digit values
-// Confirm correct values with: http://www.isbn-check.com/
-// 2 Oct 2015
-// Assignment to read code, modify as required and collaborate.
+// Miguel Fletes
+// 10/06/15
+/* description:
+    -ISBN Check for 10 digit values
+    -Confirm correct values with: http://www.isbn-check.com/
+    -2 Oct 2015
+    -Assignment to read code, modify as required and collaborate.
 
-// CSS-1 HW due 8 Oct
-// Correct functions for ISBN10 and ISBN13 are listed below
-// Add two new tests each for ISBN10 and ISBN13 which pass
-// Issue git commit
-// Add two new tests each or ISBN10 and ISBN13 which fail
-// Issue git commit
-// Add your name to line 1, "Joe Welch, and xxxxxxx"
-// Issue git commit
-// Change the user.name and user.email to your name and email
-// Issue git commit
-// Issue git push to your GitHub account
+    -CSS-1 HW due 8 Oct
+    -Correct functions for ISBN10 and ISBN13 are listed below
+    -Add two new tests each for ISBN10 and ISBN13 which pass
+   - Issue git commit
+    -Add two new tests each or ISBN10 and ISBN13 which fail
+    -Issue git commit
+   - Add your name to line 1, "Joe Welch, and xxxxxxx"
+   - Issue git commit
+   - Change the user.name and user.email to your name and email
+    Issue git commit
+    Issue git push to your GitHub account
+*/
 
 #include <iostream>
 #include <typeinfo>
 #include <string>
 #include <cctype>
 #include <cstdlib>
+#include <cassert>
 using namespace std;
 
 // must use these two functions
@@ -38,7 +42,35 @@ int main()
     string strA = "0385353308";      // test case for ISBN10
     string strB = "9780136091813";   // test case for ISBN13
     
-      
+    string strC = "0133591743";//ISBN10 for css book
+    string strD = "0393935841";//ISBN10 for english book
+    
+    string strE = "9780133591743";//ISBN13 for css book
+    string strF = "8601401247128";//ISBN13 for english book
+    
+    int sum1 = sumISBN10Digits(strA);
+    int sum2 = sumISBN13Digits(strB);
+    
+    int sum3 = sumISBN10Digits(strC);
+    int sum4 = sumISBN10Digits(strD);
+    
+    int sum5 = sumISBN13Digits(strE);
+    int sum6 = sumISBN13Digits(strF);
+    
+    assert(isValidISBN10(sum1) == true);
+    assert(isValidISBN13(sum2) == true);
+    
+    assert(isValidISBN10(sum3) == true);
+    assert(isValidISBN10(sum4) == true);
+    
+    assert(isValidISBN13(sum5) == true);
+    assert(isValidISBN13(sum6) == true);
+    
+    //cout << sumISBN10Digits << endl;
+    //cout << sumISBN13Digits << endl;
+    //cout << isValidISBN10(sum1) << endl;
+    
+    cout << "ran to here" << endl;      
     return 0;
     
 }// end main()
