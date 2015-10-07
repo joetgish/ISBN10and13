@@ -21,7 +21,6 @@
 #include <string>
 #include <cctype>
 #include <cstdlib>
-#include <cassert> // assert()
 using namespace std;
 
 // must use these two functions
@@ -39,31 +38,6 @@ int main()
     string strA = "0385353308";      // test case for ISBN10
     string strB = "9780136091813";   // test case for ISBN13
     
-//****START CHANGES
-    
-    // create two new test cases each for ISBN10 and ISBN13 that pass
-    string strC = "0538497904";     // ISBN10
-    string strD = "9780538497909";  // ISBN13
-    string strE = "032192553X";     // ISBN10
-    string strF = "9780321925534";  // ISBN13
-    
-    // calculate checksums for strA, strB, strC, strD, strE, and strF
-    int sumA = sumISBN10Digits(strA);   
-    int sumB = sumISBN13Digits(strB);   
-    int sumC = sumISBN10Digits(strC);   
-    int sumD = sumISBN13Digits(strD);   
-    int sumE = sumISBN10Digits(strE);   
-    int sumF = sumISBN13Digits(strF);  
-    
-    // check validity of all strings
-    assert( isValidISBN10(sumA) == true );
-    assert( isValidISBN13(sumB) == true );
-    assert( isValidISBN10(sumC) == true );
-    assert( isValidISBN13(sumD) == true );
-    assert( isValidISBN10(sumE) == true );
-    assert( isValidISBN13(sumF) == true );
-    
-//****END CHANGES
       
     return 0;
     
