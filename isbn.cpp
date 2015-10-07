@@ -35,9 +35,22 @@ bool isValidISBN13(int val);
 int main()
 {
 
-    string strA = "0385353308";      // test case for ISBN10
-    string strB = "9780136091813";   // test case for ISBN13
+    string strA1 = "0385353308";      // test case for ISBN10
+    string strA2 = "123456789X";   // test case 2 for ISBN10
     
+    string strB1 = "9780136091813";   // test case for ISBN13
+    string strB2 = "1486582791755";   // test case 2 for ISBN13
+  
+    cout << sumISBN10Digits(strA1) << endl;
+    cout << sumISBN10Digits(strA2) << endl;
+    cout << sumISBN13Digits(strB1) << endl;
+    cout << sumISBN13Digits(strB2) << endl;
+
+    cout << isValidISBN10(sumISBN10Digits(strA1)) << endl;
+    cout << isValidISBN10(sumISBN10Digits(strA2)) << endl;
+    cout << isValidISBN13(sumISBN13Digits(strB1)) << endl;
+    cout << isValidISBN13(sumISBN10Digits(strB2)) << endl;
+
       
     return 0;
     
