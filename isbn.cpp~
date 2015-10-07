@@ -43,7 +43,6 @@ int main()
     string strB = "9780136091813";   // test case for ISBN13
     string strB1 = "9781587133282";
     string strB2 = "1862400927134";
-    string strB3 = "2763334890127";
     
     if(sumISBN10Digits(strA) % 11 == 0)
     {
@@ -60,7 +59,7 @@ int main()
      assert(sumISBN13Digits(strB) % 10 == 0); //assert pass
      assert(sumISBN13Digits(strB1) % 10 == 0); //assert pass
      assert(sumISBN13Digits(strB2) % 10 != 0); //assert fail
-     assert(sumISBN13Digits(strB3) % 10 != 0); //assert fail
+    //assert(sumISBN10Digits(strA3) % 11 != 0); //assert fail
   
     
         
