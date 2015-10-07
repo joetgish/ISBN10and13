@@ -1,4 +1,4 @@
-// Joe Welch
+// Joe Welch, and Samuel Sanchez
 // ISBN Check for 10 digit values
 // Confirm correct values with: http://www.isbn-check.com/
 // 2 Oct 2015
@@ -35,9 +35,14 @@ bool isValidISBN13(int val);
 int main()
 {
 
-    string strA = "0385353308";      // test case for ISBN10
-    string strB = "9780136091813";   // test case for ISBN13
-    
+    string strA1 = "0385353308";      // test case for ISBN10
+    string strA2 = "123456789X";   // test case 2 for ISBN10
+    string strA3 = "1 234-567-89 X"; // test case 3 for ISBN10. Failed: Spaces/dashes produce errors
+    string strA4 = "3566 4325"; // test case 4 for ISBN10. Failed: Space causes error
+    string strB1 = "9780136091813";   // test case for ISBN13
+    string strB2 = "1486582791755";   // test case 2 for ISBN13
+    string strB3 = "148-658-279-175 5"; // Test case 3 for ISBN 13. Failed: Spaces/dashes produce errors
+    string strB4 = "148658-272175     5"; // Test case 4 for ISBN 13. Failed: Out of range
       
     return 0;
     
