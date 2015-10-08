@@ -43,7 +43,8 @@ int main()
     assert(isValidISBN10(sumISBN10Digits("123456789X")) == 1);//ISBN10 test
     
     assert(isValidISBN13(sumISBN13Digits("9783161484100")) == 1);//ISBN13 test
-    assert(isValidISBN13(sumISBN13Digits("9780306406157")) == 1);//ISBN13 test
+    //assert(isVALIDISBN13(sumISBN13DIGITS(""))) == 1);//ISBN13 test
+
       
     return 0;
     
