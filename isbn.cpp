@@ -41,12 +41,16 @@ int main()
     string strC = "9780439023528"; // Passing test case for ISBN13
     string strD = "0062387243"; //Passing test case for ISBN13
 
+    string strE = "0062487249";//fail test case for ISBN10
+    string strF = "9786248744867"; //fail test case for ISBN13
+
     assert(isValidISBN10(sumISBN10Digits(strA)) == true);   
     assert(isValidISBN10(sumISBN10Digits(strD)) == true);
     assert(isValidISBN13(sumISBN13Digits(strB)) == true);
     assert(isValidISBN13(sumISBN13Digits(strC)) == true);
 
-
+    assert(isValidISBN10(sumISBN10Digits(strE)) == false);
+    assert(isValidISBN13(sumISBN13Digits(strF)) == false);
       
     return 0;
     
