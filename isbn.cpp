@@ -1,4 +1,4 @@
-// Joe Welch
+// Carlos Huizar Valenzuela
 // ISBN Check for 10 digit values
 // Confirm correct values with: http://www.isbn-check.com/
 // 2 Oct 2015
@@ -21,6 +21,7 @@
 #include <string>
 #include <cctype>
 #include <cstdlib>
+#include<cassert>
 using namespace std;
 
 // must use these two functions
@@ -38,7 +39,12 @@ int main()
     string strA = "0385353308";      // test case for ISBN10
     string strB = "9780136091813";   // test case for ISBN13
     
-      
+    assert(isValidISBN10(sumISBN10Digits("0385353308")) == true);
+    assert(isValidISBN10(sumISBN10Digits("0201530821")) == true); 
+    
+    assert(isValidISBN13(sumISBN13Digits("978030640615")) == false);
+    assert(isValidISBN13(sumISBN13Digits("0206523")) == false);
+      //978-0-306-40615
     return 0;
     
 }// end main()
