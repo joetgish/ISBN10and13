@@ -45,6 +45,12 @@ int main()
     assert(isValidISBN13(sumISBN10Digits("9780136091813")) == 1);
     assert(isValidISBN13(sumISBN10Digits("9780399226908")) == 1);
     
+    assert(isValidISBN10(sumISBN10Digits("1234567899"))== 0);
+    assert(isValidISBN10(sumISBN10Digits("1234567889"))== 0);
+    
+    assert(isValidISBN13(sumISBN10Digits("9780136091869")) == 0);
+    assert(isValidISBN13(sumISBN10Digits("9780399226900")) == 0);
+    
       
     return 0;
     
