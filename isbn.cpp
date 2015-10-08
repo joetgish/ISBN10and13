@@ -1,4 +1,4 @@
-// Joe Welch
+// Joe Welch, and Nancy Gomez
 // ISBN Check for 10 digit values
 // Confirm correct values with: http://www.isbn-check.com/
 // 2 Oct 2015
@@ -40,11 +40,14 @@ int main()
     string strB = "9780136091813";   // test case for ISBN13
 	
 	assert(isValidISBN10(sumISBN10Digits("123456789X")) == true);
-    assert(isValidISBN10(sumISBN10Digits("0385353308")) == true);
-    assert(isValidISBN10(sumISBN10Digits("123X56789X")) == false);
-    assert(isValidISBN10(sumISBN10Digits("3160158492")) == false);
+	assert(isValidISBN10(sumISBN10Digits("0385353308")) == true);
+	assert(isValidISBN10(sumISBN10Digits("123X56789X")) == false);
+	assert(isValidISBN10(sumISBN10Digits("3160158492")) == false);
     
- 
+	assert(isValidISBN13(sumISBN13Digits("9781932698183")) == true);
+	assert(isValidISBN13(sumISBN13Digits("9780672327568")) == true);
+	assert(isValidISBN13(sumISBN13Digits("5363445267545")) == false);
+	assert(isValidISBN13(sumISBN13Digits("0020130202012")) == false);
     return 0;
     
 }// end main()
