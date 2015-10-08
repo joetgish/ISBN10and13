@@ -46,13 +46,11 @@ int main()
     assert (isValidISBN13(sumISBN13Digits("9781292018249")) == true);
     
     
-    /*assert (isValidISBN13(sumISBN13Digits("9780136091817"))== false);
-    assert (isValidISBN13(sumISBN13Digits("0136091812"))== false);
+    assert (isValidISBN10(sumISBN10Digits("2987334340"))== false);
+    assert (isValidISBN10(sumISBN10Digits("2122344546"))== false);
     
-    assert (isValidISBN13(sumISBN13Digits("2321334345"))== false);
-    assert (isValidISBN13(sumISBN13Digits("2321334345"))== false);
-    */
-      
+    assert (isValidISBN13(sumISBN13Digits("9780126091817"))== false);
+    assert (isValidISBN13(sumISBN13Digits("0136091812932"))== false); 
     return 0;
     
 }// end main()
