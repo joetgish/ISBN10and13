@@ -36,14 +36,18 @@ int main()
 {
 
     string strA = "0385353308";      // test case for ISBN10
-    string strA2 = "3340412111";    // new test for ISBN10
-    string strA3 = "2304160034";    //new test for ISBN10
+    string strA2 = "3340412111";    // new test for ISBN10 passed
+    string strA3 = "2304160034";    //new test for ISBN10 passed
+    string strA4 = "2345023468";    //new test for ISBN10 failed
+    string strA5 = "6042020263";    //new test for ISBN10 failed
     string strB = "9780136091813";   // test case for ISBN13
-    string strB2 = "9425103941035"; // test case for ISBN13
-    string strB3 = "3420549850183"; // test case for ISBN13
+    string strB2 = "9425103941035"; // test case for ISBN13 passed
+    string strB3 = "3420549850183"; // test case for ISBN13 passed
+    string strB4 = "9820502810206"; // test case for ISBN13 failed
+    string strB5 = "2520257704263"; // test case for ISBN13 failed
     
-    cout << sumISBN13Digits(strB3) << endl;   
-    cout << isValidISBN13(100) << endl;  
+    cout << sumISBN13Digits(strB5) << endl;   
+    cout << isValidISBN13(99) << endl;  
     return 0;
     
 }// end main()
