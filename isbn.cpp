@@ -39,15 +39,21 @@ int main()
     string strA = "0385353308";      // test case for ISBN10
     string strB = "9780136091813";   // test case for ISBN13
     
-    
+    // check if they are real isbn
     assert(isValidISBN10( sumISBN10Digits("0393935841") ) == true );    
     assert(isValidISBN10(sumISBN10Digits("1285057090") ) == true );
     
     assert(isValidISBN13(sumISBN13Digits("8601401247128") ) == true);
     assert(isValidISBN13(sumISBN13Digits("9781285057095") ) == true);
     
+    // check isbn is false
+    assert(isValidISBN10( sumISBN10Digits("0393565841") ) == false ); 
+    assert(isValidISBN10( sumISBN10Digits("8973548559") ) == false); 
     
-    
+    assert(isValidISBN13(sumISBN13Digits("8601401247298") ) == false);
+    assert(isValidISBN13(sumISBN13Digits("8740375068372") ) == false);
+      
+      
       
     return 0;
     
