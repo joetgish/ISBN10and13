@@ -40,10 +40,6 @@ int main()
     string strB = "9780136091813";   // test case for ISBN13
     
     assert(isValidISBN10(sumISBN10Digits(strA))== 1);
-    assert(isValidISBN10(sumISBN10Digits("123456789X"))== 1);
-    
-    assert(isValidISBN13(sumISBN10Digits("9780136091813")) == 1);
-    assert(isValidISBN13(sumISBN10Digits("9780399226908")) == 1);
     
       
     return 0;
