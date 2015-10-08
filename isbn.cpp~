@@ -21,6 +21,7 @@
 #include <string>
 #include <cctype>
 #include <cstdlib>
+#include <cassert>
 using namespace std;
 
 // must use these two functions
@@ -47,16 +48,27 @@ int main()
   strB = "9780136091813";  
   int sum1 = sumISBN10Digits(strA);
   int sum2 = sumISBN13Digits(strB);
-    cout << "A" << isValidISBN10(sum1) << endl;
-    cout << "B" << isValidISBN13(sum2) << endl;
-  
+    assert(isValidISBN10(sum1) == 1);
+    assert(isValidISBN13(sum1) == 1);
   strA = "0470288175";      
   strB = "9780123456472";  
   sum1 = sumISBN10Digits(strA);
   sum2 = sumISBN13Digits(strB);
-    cout <<"A" << isValidISBN10(sum1) << endl;
-    cout <<"B" << isValidISBN13(sum2) << endl;
+    assert(isValidISBN10(sum1) == 1);
+    assert(isValidISBN13(sum1) == 0);
+  strA = "0321557143";      
+  strB = "9780123454472";  
+  sum1 = sumISBN10Digits(strA);
+  sum2 = sumISBN13Digits(strB);
+   assert(isValidISBN10(sum1) == 0);
+   assert(isValidISBN13(sum1) == 0);
   
+   strA = "1986547454";      
+   strB = "4654556466154";  
+   sum1 = sumISBN10Digits(strA);
+   sum2 = sumISBN13Digits(strB);
+   cout <<"A" << isValidISBN10(sum1) << endl;
+   cout <<"B" << isValidISBN13(sum2) << endl;
   
   
   
