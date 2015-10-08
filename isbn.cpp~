@@ -50,10 +50,17 @@ int main()
     assert(sumISBN10Digits(strA) % 11 == 0);
     assert(sumISBN10Digits(strAB) % 11 == 0);
     
+    //test case for ISBN10 (FAIL)
+    assert(sumISBN10Digits(strABCD) % 11 != 0);
+    assert(sumISBN10Digits(strABC) % 11 != 0);
+    
     //test case for ISBN13 (PASS)
     assert(sumISBN13Digits(strB) % 10 == 0);
     assert(sumISBN13Digits(strBB) % 10 == 0);
     
+    //test case for ISBN13 (FAIL)
+    assert(sumISBN13Digits(strBBB) % 10 != 0);
+    assert(sumISBN13Digits(strC) % 10 != 0);
     
     return 0;
     
