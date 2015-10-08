@@ -34,8 +34,7 @@ bool isValidISBN13(int val);
 
 int main()
 {
-    string book10 ="0321832019"
-    string book13 ="9780321832016"
+
     string strA = "0385353308";      // test case for ISBN10
     string strB = "9780136091813";   // test case for ISBN13
     
