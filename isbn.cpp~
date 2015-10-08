@@ -39,7 +39,8 @@ int main()
     string strB = "9780136091813";   // test case 1 for ISBN13
     string strC = "1593275900";      // test case 2 for ISBN10
     string strD = "9781593275907";   // test case 2 for ISBN13
-      
+    string strE = "1593275901";      // test case 3 for ISBN10
+    string strF = "9781593275901";   // test case 3 for ISBN13
     return 0;
     
 }// end main()
