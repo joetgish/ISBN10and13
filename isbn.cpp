@@ -1,4 +1,4 @@
-// Joe Welch
+// Joe Welch and Diego Medina
 // ISBN Check for 10 digit values
 // Confirm correct values with: http://www.isbn-check.com/
 // 2 Oct 2015

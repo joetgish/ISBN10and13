@@ -37,26 +37,26 @@ int main()
 {
 
     string strA = "0385353308";      // test case for ISBN10  (PASS)
-    //string strA2 = "9780136091";     // 2nd  (FAIL)
+    string strA2 = "9780136091";     // 2nd  (FAIL)
     string strA3 = "123456789X";     // 3rd  (PASS)
-    //string strA4 = "1234567890";     // 4th (FAIL)
+    string strA4 = "1234567890";     // 4th (FAIL)
     
     string strB = "9780136091813";   // test case for ISBN13  (PASS)
-    //string strB2 = "0385353308978";  // 2nd (FAIL)
+    string strB2 = "0385353308978";  // 2nd (FAIL)
     string strB3 = "9780136091844";  // 3rd (PASS)
-    //string strB4 = "1234567890123";  // 4th (FAIL)
+    string strB4 = "1234567890123";  // 4th (FAIL)
     
     
     assert(   isValidISBN10( sumISBN10Digits(strA)   )  == 1 ); //test 1 for ISB10
-    //assert(   isValidISBN10( sumISBN10Digits(strA2)  )  == 0 );// 2
+    assert(   isValidISBN10( sumISBN10Digits(strA2)  )  == 0 );// 2
     assert(   isValidISBN10( sumISBN10Digits(strA3)  )  == 1 );// 3
-    //assert(   isValidISBN10( sumISBN10Digits(strA4)  )  == 0 );// 4
+    assert(   isValidISBN10( sumISBN10Digits(strA4)  )  == 0 );// 4
     
     
     assert(   isValidISBN13( sumISBN13Digits(strB)   )  == 1 ); // test 1 ISBN13
-    //assert(   isValidISBN13( sumISBN13Digits(strB2)  )  == 0 ); // 2   
+    assert(   isValidISBN13( sumISBN13Digits(strB2)  )  == 0 ); // 2   
     assert(   isValidISBN13( sumISBN13Digits(strB3)  )  == 1 ); // 3   
-    //assert(   isValidISBN13( sumISBN13Digits(strB4)  )  == 0 ); // 4   
+    assert(   isValidISBN13( sumISBN13Digits(strB4)  )  == 0 ); // 4   
     
     
     
