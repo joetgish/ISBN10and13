@@ -35,14 +35,22 @@ bool isValidISBN13(int val);
 
 int main()
 {
-//0385353308
-    assert(isValidISBN10(sumISBN10Digits("0385353308")) == true);      // test case for ISBN10
-    assert(isValidISBN10(sumISBN10Digits("0385353308")) == true);
-     // test case for ISBN10
-     
+     //Test case for ISBN10
+     assert(isValidISBN10(sumISBN10Digits("0385353308")) == true);      
+     assert(isValidISBN10(sumISBN10Digits("0385353308")) == true);        
      //Test case for ISBN13
      assert(isValidISBN13(sumISBN13Digits("9780133591743")) == true);
      assert(isValidISBN13(sumISBN13Digits("8601200643879")) == true);
+        
+     //Test case for ISBN10 that evaluates to false
+     assert(isValidISBN10(sumISBN10Digits("0385353309")) == false);      
+     assert(isValidISBN10(sumISBN10Digits("1425367890")) == false);
+     //Test case for ISBN13 that evaluates to false
+     assert(isValidISBN13(sumISBN13Digits("1010101010101")) == false);
+     assert(isValidISBN13(sumISBN13Digits("1526372839291")) == false);
+     
+     
+     
      
     
     string strB = "9780136091813";   // test case for ISBN13
