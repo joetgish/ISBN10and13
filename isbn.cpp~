@@ -37,14 +37,18 @@ int main()
 {
     string strA = "0385353308";      // test case for ISBN10
     string strB = "9780136091813";   // test case for ISBN13
-    
+   //Two test case for each to passed 
     assert(sumISBN10Digits("4895423617") == 292);
     assert(sumISBN10Digits("789456786X") == 376);
-    
+    assert(sumISBN13Digits("4617892354456") == 132);
+    assert(sumISBN13Digits("1489762345789") == 143);
+   
+   //Two test case for each to fail
+    assert(isValidISBN10(sumISBN10Digits("948954X235")) == 0);
+    assert(isValidISBN10(sumISBN10Digits("9454646163895")) == 0);
+   // assert(sumISBN10Digits("789456786X") == 376);
     //assert(sumISBN13Digits("4617892354456") == 132);
-    
-    cout << sumISBN13Digits("1489762345789") << endl;
-      
+   // assert(sumISBN13Digits("1489762345789") == 143);
     return 0;
     
 }// end main()
