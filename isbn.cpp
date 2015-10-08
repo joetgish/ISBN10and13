@@ -8,7 +8,7 @@
 // Correct functions for ISBN10 and ISBN13 are listed below
 // Add two new tests each for ISBN10 and ISBN13 which pass
 // Issue git commit
-// Add two new tests each or ISBN10 and ISBN13 which fail
+// Add two new tests each for ISBN10 and ISBN13 which fail
 // Issue git commit
 // Add your name to line 1, "Joe Welch, and xxxxxxx"
 // Issue git commit
@@ -39,13 +39,17 @@ int main()
 
     string strA = "0385353308";      // test case for ISBN10
     string strB = "9780136091813";   // test case for ISBN13
-    string strC = "123456789X";
-    string strD = "9780072125757";
+    string strC = "123456789X";      // test case for ISBN10
+    string strD = "9780072125757";   // test case for ISBN13
+    string strE = "135825165-7";     // test case for ISBN10
+    string strF = "1234567891234";   // test case for ISBN13
     
     assert( ( isValidISBN10( sumISBN10Digits(strA) ) ) == true);
     assert( ( isValidISBN13( sumISBN13Digits(strB) ) ) == true);
     assert( ( isValidISBN10( sumISBN10Digits(strC) ) ) == true);
     assert( ( isValidISBN13( sumISBN13Digits(strD) ) ) == true);
+    assert( ( isValidISBN10( sumISBN10Digits(strE) ) ) == false);
+    assert( ( isValidISBN13( sumISBN13Digits(strF) ) ) == false);
     
     cout << "Ran to here!!\n";
     
