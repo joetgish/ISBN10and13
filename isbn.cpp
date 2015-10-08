@@ -42,6 +42,11 @@ int main()
     assert(isValidISBN10(sumISBN10Digits("9971502100")) == 1); // true test case for ISBN10
     assert(isValidISBN13(sumISBN13Digits("9780306406157")) == 1); // true test case for ISBN13
     assert(isValidISBN13(sumISBN13Digits(strB)) == 1); // true test case for ISBN13
+    
+    assert(isValidISBN10(sumISBN10Digits("1234567890")) == 0); // false test case for ISBN10
+    assert(isValidISBN10(sumISBN10Digits("1548332548")) == 0); // false test case for ISBN10
+    assert(isValidISBN13(sumISBN13Digits("4562154897563")) == 0); // false test case for ISBN13
+    assert(isValidISBN13(sumISBN13Digits("4569841236548")) == 0); // false test case for ISBN13
       
     return 0;
     
