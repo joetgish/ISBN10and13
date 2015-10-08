@@ -1,4 +1,4 @@
-// Joe Welch
+// Joe Welch, and Daniel Calderon
 // ISBN Check for 10 digit values
 // Confirm correct values with: http://www.isbn-check.com/
 // 2 Oct 2015
@@ -21,6 +21,7 @@
 #include <string>
 #include <cctype>
 #include <cstdlib>
+#include <cassert>
 using namespace std;
 
 // must use these two functions
@@ -35,9 +36,30 @@ bool isValidISBN13(int val);
 int main()
 {
 
-    string strA = "0385353308";      // test case for ISBN10
-    string strB = "9780136091813";   // test case for ISBN13
     
+   
+    //************************ISBN10*********************************
+    assert(sumISBN10Digits("0385353308") == 198);
+    assert(isValidISBN10(198)==true);
+    assert(sumISBN10Digits("9992158107") == 330);
+    assert(isValidISBN10(330)==true);
+    assert(sumISBN10Digits("9971502100") == 275);
+    assert(isValidISBN10(275)==true);
+    assert(sumISBN10Digits("0385353309") == 199);
+    assert(isValidISBN10(199)==false);
+    assert(sumISBN10Digits("9090878768") == 318);
+    assert(isValidISBN10(318)==false);
+   //****************************ISBN13********************************
+    assert(sumISBN13Digits("9780136091813") == 80) ;
+    assert(isValidISBN13(80)==true);
+    assert(sumISBN13Digits("0000000000000") == 0) ;
+    assert(isValidISBN13(0)==true);
+    assert(sumISBN13Digits("9781234567897") == 140) ;
+    assert(isValidISBN13(140)==true);
+    assert(sumISBN13Digits("999999999999") == 216) ;
+    assert(isValidISBN13(216)==false);
+    assert(sumISBN13Digits("453675894628") == 145) ;
+    assert(isValidISBN13(145)==false);
       
     return 0;
     
