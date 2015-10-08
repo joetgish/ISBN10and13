@@ -38,7 +38,8 @@ int main()
     string book13 ="9780321832016"
     string strA = "0385353308";      // test case for ISBN10
     string strB = "9780136091813";   // test case for ISBN13
-    
+    string book10f ="0321832018"
+    string book13f ="9780321832017"
       
     return 0;
     
