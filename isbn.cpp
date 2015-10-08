@@ -1,4 +1,4 @@
-//Name: Raquel Figueroa
+//Joe Welch, and Raquel Figueroa
 //Date: 7 October 2015
 // ISBN Check for 10 digit values
 // Confirm correct values with: http://www.isbn-check.com/
