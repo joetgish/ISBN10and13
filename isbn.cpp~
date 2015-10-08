@@ -67,8 +67,11 @@ int main()
    strB = "4654556466154";  
    sum1 = sumISBN10Digits(strA);
    sum2 = sumISBN13Digits(strB);
-   assert(isValidISBN10(sum1) == 0);
-   assert(isValidISBN13(sum1) == 0);
+   cout <<"A" << isValidISBN10(sum1) << endl;
+   cout <<"B" << isValidISBN13(sum2) << endl;
+  
+  
+  
   
   
   
