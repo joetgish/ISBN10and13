@@ -39,10 +39,7 @@ int main()
     assert(isValidISBN10(sumISBN10Digits("0385353308") == true));
     assert(isValidISBN10(sumISBN10Digits("324564X333") == false));
     
-    // test case for ISBN13
-    assert(isValidISBN13(sumISBN13Digits("9780136091813") == true));   
-    assert(isValidISBN13(sumISBN13Digits("43659568632X4") == false));
-      
+    
     return 0;
     
 }// end main()
