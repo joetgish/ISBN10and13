@@ -1,4 +1,4 @@
-// Joe Welch
+// Joe Welch, and Jesus Perez
 // ISBN Check for 10 digit values
 // Confirm correct values with: http://www.isbn-check.com/
 // 2 Oct 2015
@@ -57,20 +57,7 @@ int main()
     cout <<"A" << isValidISBN10(sum1) << endl;
     cout <<"B" << isValidISBN13(sum2) << endl;
   
-  strA = "0321557143";      
-  strB = "9780123454472";  
-  sum1 = sumISBN10Digits(strA);
- 
-  sum2 = sumISBN13Digits(strB);
-    cout <<"A" << isValidISBN10(sum1) << endl;
-    cout <<"B" << isValidISBN13(sum2) << endl;
   
-   strA = "1986547454";      
-   strB = "4654556466154";  
-   sum1 = sumISBN10Digits(strA);
-   sum2 = sumISBN13Digits(strB);
-   cout <<"A" << isValidISBN10(sum1) << endl;
-   cout <<"B" << isValidISBN13(sum2) << endl;
   
   
   
