@@ -1,4 +1,4 @@
-// Joe Welch
+// Joe Welch, and Samba Diallo
 // ISBN Check for 10 digit values
 // Confirm correct values with: http://www.isbn-check.com/
 // 2 Oct 2015
@@ -21,34 +21,47 @@
 #include <string>
 #include <cctype>
 #include <cstdlib>
+#include <cassert>
+#include <cmath>
 using namespace std;
 
 // must use these two functions
-int sumISBN10Digits(string val);
-int sumISBN13Digits(string val);
+string sumISBN10Digits(string val);
+string sumISBN13Digits(string val);
+
 
 // you may use or discard these functions
 int charToInt(char ch);
-bool isValidISBN10(int val);
-bool isValidISBN13(int val);
+//bool isValidISBN10(int val);
+//bool isValidISBN13(int val);
 
 int main()
 {
 
     string strA = "0385353308";      // test case for ISBN10
     string strB = "9780136091813";   // test case for ISBN13
+    assert(sumISBN10Digits("123456789X") == "123456789X is a Valid ISBN10 number.");
+    assert(sumISBN10Digits("0385353305") == "0385353305 is NOT a Valid ISBN10 number.");
+    assert(sumISBN13Digits("9781566199094") == "9781566199094 is a Valid ISBN13 number.");
+    assert(sumISBN13Digits("9780136091813") == "9780136091813 is a Valid ISBN13 number.");
+    assert(sumISBN10Digits("12345678912345") == "12345678912345 is NOT a Valid ISBN10 number.");
+    assert(sumISBN10Digits("038535330578X") == "038535330578X is NOT a Valid ISBN10 number.");
+    assert(sumISBN13Digits("978156619956094") == "978156619956094 is NOT a Valid ISBN13 number.");
+    assert(sumISBN13Digits("97B8156619899094") == "97B8156619899094 is NOT a Valid ISBN13 number.");
+
+  
     
-      
     return 0;
     
 }// end main()
 
 // ****************************
-int sumISBN10Digits(string val)
+string sumISBN10Digits(string val)
 {
     int sum = 0;
     int num;
-    
+    string right = val + " is a Valid ISBN10 number.";
+    string wrong = val + " is NOT a Valid ISBN10 number.";
     // Sum : positional value x digit value, except rightmost digit (may be 'X')
     for(int ix = 0; ix < val.length() - 1 ; ix++)
     {
@@ -66,16 +79,17 @@ int sumISBN10Digits(string val)
         num = charToInt(val.at(val.length() - 1) );
     }
     sum += num;
-    
-    return sum;
+    if ((sum % 11) == 0)
+    {
+        return right;
+    }
+    else
+    {
+        return wrong;
+    }       
 }// endl;
 
 // ***************************
-int charToInt(char ch)
-{
-    return (int(ch) - 48);
-
-}// charToInt(char ch)
 
 // ****************************
 bool isValidISBN10(int val)
@@ -92,11 +106,13 @@ bool isValidISBN10(int val)
 }//end bool isValid(int val)
 
 // ******************************
-int sumISBN13Digits(string val)
+string sumISBN13Digits(string val)
 {
     int sum = 0;
     int p;
     int num;
+    string right = val + " is a Valid ISBN13 number.";
+    string wrong = val + " is NOT a Valid ISBN13 number.";
     
     for(int ix = 0; ix < val.length() ; ix++)
     {
@@ -112,10 +128,18 @@ int sumISBN13Digits(string val)
          }
     
        sum += num;
+       
     }//end for()
-    return sum;
+    if ((sum % 10) == 0)
+    {
+        return right;
+    }
+    else
+    {
+        return wrong;
+    }
 
-}// int sumISBN13Digits(string val)
+}// string sumISBN13Digits(string val)
 
 // **********************************
 bool isValidISBN13(int val)
@@ -130,3 +154,9 @@ bool isValidISBN13(int val)
     }
 
 }// end bool isValidISBN13(int val)
+int charToInt(char ch)
+{
+    return (int(ch) - 48);
+
+}// charToInt(char ch)
+
